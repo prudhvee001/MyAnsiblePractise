@@ -1,0 +1,100 @@
+1  ssh-keygen
+    2  cd .ssh
+    3  ll
+    4  cat id_rsa.pub
+    5  clear
+    6  cd ..
+    7  cd /opt
+    8  sudo vim inventoryFile
+    9  sudo yum install ansible
+   10  ll
+   11  ansible -i /opt/inventoryFile all -m ping
+   12  ssh opsServer
+   13  ssh 35.172.213.111
+   14  ansible -i /opt/inventoryFile all -m ping
+   15  clear
+   16  ll
+   17  sudo vim playbook.yaml
+   18  ll
+   19  sudo vim index.html
+   20  ansible-playbook -i opt/inventory  playbook.yaml --tags=dev
+   21  sudo vim playbook.yaml
+   22  clear
+   23*
+   24  ll
+   25  ansible-playbook -i opt/inventory  playbook.yaml --tags=dev
+   26  sudo vim playbook.yaml
+   27  clear
+   28  sudo vim playbook.yaml
+   29  ll
+   30* ansible-playbook -i opt/inventory  playbook.yaml --tags=de
+   31  sudo vim playbook.yaml
+   32  clear
+   33  ll
+   34  sudo vim playbook.yaml
+   35  ansible-playbook -i opt/inventory  playbook.yaml --tags=dev
+   36  ansible-playbook -i opt/inventory  playbook.yaml --tags=dev --limit=devServer
+   37  sudo vim playbook.yaml
+   38  clear
+   39  sudo vim inventoryFile
+   40  clear
+   41  sudo vim inventoryFile
+   42  ll
+   43  sudo vim playbook.yaml
+   44  sudo vim inventoryFile
+   45  sudo vim playbook.yaml
+   46  ansible-playbook -i opt/inventory  playbook.yaml --tags=dev --limit=devServer
+   47  clear
+   48  ll
+   49  sudo vim inventoryFile
+   50  sudo vim index.html
+   51  sudo vim playbook.yaml
+   52  ansible-playbook -i opt/inventory  playbook.yaml --tags=dev --limit devServer
+   53  sudo vim inventoryFile
+   54  clear
+   55  ansible-playbook -i  playbook.yaml --tags=dev --limit devServe
+   56  clear
+   57  ansible-playbook -i opt/inventory  playbook.yaml --tags=dev --limit devServer
+   58  ansible-playbook -i /opt/inventory  playbook.yaml --tags=dev --limit devServer
+   59  ansible -i /opt/inventoryFile all -m ping
+   60  clear
+   61  ansible -i /opt/inventoryFile all -m ping
+   62  ll
+   63  sudo vim inventoryFile
+   64  sudo vim index.html
+   65  sudo vim playbook.yaml
+   66  ansible-playbook -i opt/inventoryFile  playbook.yaml --tags=dev --limit devServer
+   67  clear
+   68  ansible-playbook -i opt/inventoryFile  playbook.yaml --tags=dev --limit devServer
+   69  ll
+   70  cd ..
+   71  ll
+   72  clear
+   73  ansible-playbook -i /opt/inventoryFile  playbook.yaml --tags=dev --limit devServer
+   74  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=dev --limit devServer
+   75  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=ops --limit opsServer
+   76  clear
+   77  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=ops --limit opsServer
+   78  clear
+   79  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=httpd --limit both
+   80  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=httpd
+   81  ssh ec2@54.234.124.210
+   82  clear
+   83  ssh 54.234.124.210
+   84  clear
+   85  ssh ec2@54.234.124.210
+   86  clear
+   87  ssh 54.234.124.210
+   88  ssh 35.172.213.111
+   89  ll
+   90  cd opt
+   91  ll
+   92  vim playbook.yaml
+   93  sudo vim playbook.yaml
+   94  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=both
+   95  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=dev --limit devServer
+   96  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=ops --limit opsServer
+   97  ansible-playbook -i /opt/inventoryFile  /opt/playbook.yaml --tags=httpd
+   98  ssh 54.234.124.210
+   99  ssh 35.172.213.111
+  100  history

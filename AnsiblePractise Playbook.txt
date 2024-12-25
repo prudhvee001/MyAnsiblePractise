@@ -1,0 +1,99 @@
+---
+- name: installing the softwares and deploying into servers
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name : install git in the both the servers(devServer & opsServer)
+      yum:
+        name: git
+        state: present
+      tags: both
+
+    - name : install java in the devServer
+      yum:
+        name: java
+        state: present
+      tags: dev
+
+
+    - name : install httpd in bothe servers
+      yum:
+        name: httpd
+        state: present
+      tags: httpd
+
+
+    - name : start httpd service
+      service:
+         name: httpd
+         state: started
+      tags: httpd
+
+    - name : status of httpd service
+      shell: service httpd status
+      register: service_prnt
+      tags: httpd
+
+    - name : display status of httpd service
+      debug:
+        var: service_prnt
+      tags: httpd
+
+
+    - name : add user in dev server
+      user:
+        name: prudhviDev
+        state: present
+      tags: dev
+
+    - name : add user in ops server
+      user:
+        name: prudhviOps
+        state: present
+      tags: ops
+
+    - name : create File in the dev server
+      file:
+        path: /opt/DevFile
+        state: touch
+      tags: dev
+
+    - name : create File in the ops server
+      file:
+        path: /opt/OpsFile
+        state: touch
+      tags: ops
+
+    - name : create directory in the dev server
+      file:
+        path: /opt/dev_Folder
+        state: directory
+      tags: dev
+
+    - name : create directory in the ops server
+      file:
+        path: /opt/operations_Folder
+        state: directory
+      tags: ops
+
+
+    - name : copy the file from base
+      copy:
+        src: /opt/index.html
+        dest: /var/www/html/index.html
+      tags: both
+
+
+
+
+#install git in both servers
+#install java in devServer
+#add user in each server
+#create Files in the servers
+#create directories in the servers
+                                         
+
+   
+
